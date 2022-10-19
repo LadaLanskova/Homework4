@@ -1,6 +1,7 @@
+
 -- create
 CREATE TABLE CLASSMATES (
-  classmatesId INTEGER PRIMARY KEY,
+  clmId INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
   age INTEGER NOT NULL,
   adress TEXT NOT NULL
@@ -13,8 +14,9 @@ INSERT INTO CLASSMATES VALUES (0003, 'Яковлева Екатерина', 22, 
 INSERT INTO CLASSMATES VALUES (0004, 'Климович Светлана', 20, 'Санкт-Петербург, Приморский район');
 INSERT INTO CLASSMATES VALUES (0005, 'Мельдер Алексей', 28, 'Санкт-Петербург, Петроградский район');
 INSERT INTO CLASSMATES VALUES (0006, 'Гусев Станислав', 21, 'Санкт-Петербург, Центральный район');
+INSERT INTO CLASSMATES VALUES (0007, 'Иванов Николай', 21, 'Санкт-Петербург, Петроградский район');
+INSERT INTO CLASSMATES VALUES (0008, 'Петрова Анна', 24, 'Санкт-Петербург, Василеостровкий район');
+INSERT INTO CLASSMATES VALUES (0009, 'Васильев Антон', 27, 'Санкт-Петербург, Красногвардейский район');
 
 -- fetch 
-SELECT * FROM CLASSMATES WHERE adress = 'Санкт-Петербург, Василеостровкий район';
-
-SELECT * FROM CLASSMATES WHERE age > 21;
+SELECT * FROM CLASSMATES WHERE (adress = 'Санкт-Петербург, Василеостровкий район' OR adress = 'Санкт-Петербург, Петроградский район') AND age > 21;
